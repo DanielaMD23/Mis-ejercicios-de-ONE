@@ -1,0 +1,54 @@
+.titulo-principal{
+    padding-left: 30px;
+}
+
+#banner{
+    width: 100%; /*Anchura del elemento*/
+}
+
+.principal{
+    background: #CCCCCC;
+    padding: 20px;
+}
+
+.titulo-centralizado{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+em strong{
+    color: red;
+}
+/*Para llamar un id #*/
+#mision{
+    font-size: 20px;
+}
+
+.diferenciales{
+    background: #FFFFFF;
+    padding: 30px;
+}
+
+ul{
+    /*Ocupar su espacio y los espaciaminetos se ajusten*/
+    display: inline-block; 
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+/*Para llamar un class . */
+.items{
+    font-style: italic;
+}
+
+.imgdiferenciales{
+    width: 50%;
+}
+
+.principal p{
+    margin:  0 0 1em;
+}

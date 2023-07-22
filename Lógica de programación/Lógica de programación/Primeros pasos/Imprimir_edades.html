@@ -1,0 +1,25 @@
+<title>Imprimir edades</title>
+<meta charset="UTF-8">
+<script>
+    function saltarlinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");//<hr> Crea líneas.
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>" );//<big>Agranda la letra.
+        saltarlinea();
+
+    }
+    var a = 2025 //la variable a se refiere a años.
+    imprimir("Hola amigos");
+    //Este código calcula las edades de Nami, Robin y Chopper.
+    imprimir("Nami tiene: " + (a-2003) + " años.");
+    imprimir("Robin tiene: " + (a-1993) + " años.");
+    imprimir("Chopper tiene: " + (a-2006) + " años.");
+
+</script>

@@ -1,0 +1,166 @@
+<title>Programa</title>
+<meta charset="UTF-8">
+<!--En HTML no hay diferenciación de Mayúsculas y minúsculas-->
+<h1>Estoy probando el mundo de HTML dentro de JavaScript</h1>
+<br>
+<!--Uso de HTML dentro de JavaScript-->
+<script>
+        /*document.write=Escriba documentos*/
+        document.write("<h1>Ejercicio 1 <br></h1>");
+        document.write("La edad de Daniela es ..."); /* ""= reconocer que es texto*/
+        document.write("? <br>");
+        document.write("2" + "6<br>"); /*Concatenación*/
+        document.write("<br>");
+
+        document.write("<h1>Ejercicio 2 <br></h1>");
+        document.write("El promedio de edad de Luffy, Zoro y Sanji es: ");
+        document.write((19+21+21)/3 + "<br>");
+        document.write("El suma de las edadesde Luffy, Zoro y Sanji es: " + (19+21+21) + "<br>");
+        document.write("Luffy nació en el año: ");
+        document.write(2023-19 + "<br>");
+        document.write("Zoro nació en el año: ");
+        document.write(2023-21 + "<br>");
+        document.write("Sanji nació en el año: ");
+        document.write(2023-21 + "<br>");
+
+        document.write("<h1>Ejercicio 3 <br></h1>");
+        /*Uso de variables*/
+        var a = 2025; /* var= definir variable _  a quiere decir año _ Las variables si distinges las Mayúsculas de las minúsculas.*/
+
+        document.write("Luffy tiene: " + (a-2001) + "años. <br>");
+        document.write("Zoro tiene: " + (a-1999) + "años. <br>");
+        document.write("Sanji tiene: " + (a-1999) + "años. <br>");
+
+        a = 2030; /*Secuencia lógica de ejecución del programa*/
+        document.write("Ussop tiene: " + (a-2001) + "años. <br>");
+
+        document.write("<h1>Ejercicio 4 <br></h1>");
+        a = 2023
+        var edadNami = 20;
+        var edadRobin = 30;
+        var edadChopper = 17;
+
+        document.write("Nami tiene: " + (a-2003) + " años. <br>");
+        document.write("Robin tiene: " + (a-1993) + " años. <br>");
+        document.write("Chopper tiene: " + (a-2006) + " años. <br>");
+
+        var nombre1 = "Nami";
+        var nombre2 = "Robin";
+        var nombre3 = "Chopper";
+        promedio = (edadNami+edadRobin+edadChopper)/3
+        document.write("El promedio de las edades de " + nombre1 + ", " + nombre2 + " y " + nombre3 + "es: " + Math.round(promedio) + "<br>");
+
+        document.write("<h1>Ejercicio 5 <br></h1>");
+        var a = 2025; /*a quiere decir año.*/
+        var saltoLinea= "<br><br>" /*Eficiencia con variables*/
+
+        document.write("Luffy tiene: " + (a-2001) + "años.");
+        document.write(saltoLinea);
+        document.write("Zoro tiene: " + (a-1999) + "años.");
+        document.write(saltoLinea);
+        document.write("Sanji tiene: " + (a-1999) + "años.");
+        document.write(saltoLinea);
+
+        a = 2030; 
+
+        document.write("Ussop tiene: " + (a-2001) + "años.");
+        document.write(saltoLinea);
+
+        document.write("<h1>Ejercicio 6 <br></h1>");
+        /*Introduciendo Funciones que es: código que resive instrucciones que puede o no resivir parametros de entrada input de información y devuelve un resultado.*/
+        function saltarlinea(){
+
+            document.write("<br>"); /*Eficiencia con funciones*/           
+            document.write("<br>");
+            document.write("<br>");
+
+        }  
+
+        function imprimir(frase){
+        
+            document.write(frase);
+            saltarlinea();
+        }
+
+        //Este código calcula las edades de Nami, Robin y Chopper.
+        imprimir("Estás son las edades de Nami, Robin y Chopper:");
+        imprimir("Nami tiene: " + (a-2003) + " años.");
+        imprimir("Robin tiene: " + (a-1993) + " años.");
+        imprimir("Chopper tiene: " + (a-2006) + " años.");
+
+        document.write("<h1>Ejercicio 7 <br></h1>");
+        document.write("<h3>Calculando IMC</h3>");
+        function saltarlinea(){
+
+        document.write("<br>");          
+        document.write("<br>");
+        document.write("<br>");
+
+        }
+        function imprimir(frase){
+        
+        document.write(frase);
+        saltarlinea();
+        }
+        function calcularImc(peso,altura){
+            imc = peso/(altura*altura);
+            return(imc);
+        }
+
+    /*  var peso = 69;
+        var altura = 1.61;
+        var imc = peso/(altura*altura)
+
+        imprimir("El IMC de Daniela es de: " + Math.round(imc));
+
+        peso = 99;
+        altura = 1.70;
+        imc = peso/(altura*altura)
+
+        imprimir("El IMC de Manuel es de: " + Math.round(imc));
+    */
+        var peso = 69;
+        var altura = 1.61;
+
+        imcDaniela = calcularImc(peso,altura) //Tener en cuenta el orden de los parametros.
+        imprimir("El IMC de Daniela es de: " + Math.round(imcDaniela));
+
+        peso = 99;
+        altura = 1.71;
+
+        imcManuel = calcularImc(peso,altura)
+        imprimir("El IMC de Manuel es de: " + Math.round(imcManuel));
+        
+        //IMC segunda manera.
+        function calcularImc2(peso,altura,nombre){
+            imc = peso/(altura*altura);
+            imprimir("El IMC calculado de "+ nombre + " es: " + imc);
+        }
+        calcularImc2(50,1.50,"Julia");
+        calcularImc2(60,1.61,"Gabriel");
+
+        document.write("<h1>Ejercicio 8 <br></h1>");
+        //IMC calculando el promedio de dos personas.
+        function calcularImc3(peso,altura){
+            imc = peso/(altura*altura);
+            return imc;
+        }
+        var imcDaniela = calcularImc3(69,1.61); 
+        var imcManuel = calcularImc3(99,1.71); 
+
+        imprimir("El promedio del IMC calculado de Daniela y Manuel es: " + (imcDaniela + imcManuel)/2);
+
+        document.write("<h1>Ejercicio 9 <br></h1>");
+        //Intareacción con el usuario.
+        function calcularImc4(peso,altura){
+            return peso/(altura*altura);
+        }
+        nombre = prompt("Informe su nombre: "); //prompt en JavaScript para solicitar al usuario datos mostrando una ventana emergente.
+        pesoInformado = prompt("Informe su peso:");
+        alturaInformado = prompt("Informe su altura:");
+
+        imcCalculado= calcularImc4(pesoInformado,alturaInformado)
+
+        imprimir(nombre + ", su IMC calculado es: " + imcCalculado );
+
+</script>

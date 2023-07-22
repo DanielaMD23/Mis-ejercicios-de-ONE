@@ -1,0 +1,50 @@
+<title>Juego de Adivinación</title>
+<meta charset="UTF-8">
+<h1>Programa Juego de adivinación</h1>
+
+<script>
+        function saltarlinea(){
+
+        document.write("<br>"); /*Eficiencia con funciones*/           
+        document.write("<br>");
+        document.write("<br>");
+
+        } 
+        function imprimir(frase){
+        
+        document.write(frase);
+        saltarlinea();
+        }
+        var numeroPensado = Math.round(Math.random()*10);//Math.random = consola da un número aleatorio.
+        var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+
+        if(numeroPensado == numeroLanzado){
+            imprimir("Usted acertó");
+        }
+        else{
+            imprimir("Usted erró, el número pensado era "  + numeroPensado);
+
+        }
+
+        //Ejercicio de Loteria del juego de adivinación
+        document.write("<h2>Juego de Loteria</h2>");
+        document.write("Loteria!!<br>");
+        function sorteo(n){
+            return Math.round(Math.random()*n);
+            imprimir("<br>");
+        }
+        var numeroPensado1 = sorteo(10);
+        var numeroLanzado1 = parseInt(prompt("Ingrese un número entre 0 y 10 para la Loteria."));
+
+        if (numeroPensado1 == numeroLanzado1){
+            imprimir("Usted asertó");
+        }
+        else{
+            if(numeroPensado1 < numeroLanzado1){
+                imprimir(" Usted erró, el número pensado era menor que el número que ingresaste.");
+            }else{
+                imprimir(" Usted erró, el número pensado era mayor que el número que ingresaste.");
+            }
+        }
+
+</script>

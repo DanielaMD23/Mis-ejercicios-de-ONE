@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 2</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        function cuadrado(x,y,color){
+            var pantalla = document.querySelector("canvas");
+            var pincel = pantalla.getContext("2d"); 
+
+            pincel.fillStyle = color;//Propiedad o caracteristica.
+            pincel.fillRect(x,y,50,50); //Función
+            pincel.strokeStyle= "white";//Estilo de la línea = borde
+            pincel.strokeRect(x,y,50,50);
+        };
+/*
+        var x = 0;
+        while (x < 600) {
+            cuadrado(x,0,"darkblue");
+            cuadrado(x,50,"blue");
+            cuadrado(x,100,"lightblue");
+            x = x+50;
+        };
+*/
+        for (var x = 0; x < 600; x=x+50) {
+            cuadrado(x,0,"darkblue");
+            cuadrado(x,50,"blue");
+            cuadrado(x,100,"lightblue");
+        };
+
+
+
+
+    </script>
+    
+</body>
+</html>

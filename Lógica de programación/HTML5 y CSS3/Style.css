@@ -1,0 +1,306 @@
+/*Jerarqía en css= + id _ class _ etiqueta -  De + peso es en el html inline*/
+
+/*Página Porductos*/
+
+body{
+    /*Fuente externa. Sitio web más bonito, exclusivo y estandarizado*/
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    background: #bbb;
+    padding: 20px 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    /*Espaciamiento interno con 4 parametros: arriba, derecha, abajo, izquierda*/
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    /*Para ponerlas en mayúsculas*/
+    text-transform: uppercase;
+    color: #000;
+    /*Negrita*/
+    font-weight: bold;
+    font-size: 22px;
+    /*Quitar las linea de los links*/
+    text-decoration: none;
+}
+
+/*hover= movimiento del mouse este encima del alemento para capturar las acciones del usuario*/
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin:  0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    /*border: width style color*/
+    border-color: #000;
+    border-width: 2px;
+    border-style: solid;
+    /*border-radius: desde el superior derecho hacia las manecillas del reloj*/
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color: #c78c19;
+}
+
+/*:active= para le movimiento activo aplicar...*/
+.productos li:active{
+    border-color: #088c19 ;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    color: #ffffff;
+    font-size: 13px;
+    margin: 20px;
+}
+
+/*Página de contacto*/
+form{
+    margin: 40px 0;
+}
+
+/*replicar el estilo para varios selectores, separandolos con ,*/
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    /*Cambiar el espaciamiento interno, entre el contenido y el borde*/
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    /*Modificar el tiempo de la transición*/
+    transition: 1s all;
+    cursor: pointer;
+
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2);
+}
+
+table{
+    margin: 40px 40px;
+
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border:  1px solid #000000;
+    padding: 8px 15px;
+}
+
+/*Página Home */
+
+.banner{
+    width: 100%; /*Anchura del elemento*/
+}
+
+.principal{
+    padding: 3em 0 ;
+    background: #fefefe;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em; /*2em es dos veces el tamaño padron de la fuente*/
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.principal p{
+    margin:  0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    /*El elemnto flota pero se tiene en cuenta la sombra proyectada, dejando los elementos alrededor de él*/
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa{
+    padding: 3em 0;
+    /*Se puede manipular los grados para el lado en que se dirige*/
+    /*El color puede ocupar un %*/
+    background: linear-gradient(#fefefe,#888888);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.img-diferenciales{
+    width: 60%;
+    transition: 400ms;
+    /*Ubicación horizontal, vertical, se puede agregar difuminidad, expansión de la sombra y el color. Se pueden agregar varias sombras separandolas con ,*/
+    box-shadow: 10px 10px 30px 15px #000000 ;
+}
+
+.img-diferenciales:hover{
+    opacity: 0.3;
+}
+
+.lista-diferenciales{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    /*1.5= 1 + 50% de las letras*/
+    line-height: 1.5;
+    margin-left: 30px;
+}
+
+/*Pseudo elementos*/
+.items::before{
+    content: "★";
+}
+
+/*Seleccionale los nodos hijos _ Pseudo-classes*/
+.items:first-child{
+    font-weight: bold;
+}
+
+.video{
+    width: 560px;
+    margin: 1em auto;
+}
+
+/*Selectores avanzados= hacer uso de los operadores y simbolos matemáticos.
+main >p{}
+img + p{}
+img ~ p{}
+.principal p:not(#mision)
+*/
+
+/*Cálculos con CSS:Recomendado para tener en cuenta en los elementos y que sin importar el dispositivo usado por el usuario no se distorcione
+width: calc(40% -(26px * 4));*/
+
+/*media query= crear un estilo visual que incluye diferentes pantallas*/
+@media screen and (max-width:480px) {
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+
+    .lista-diferenciales, .img-diferenciales{
+        width: 100%;
+        margin-bottom: 40px ;
+    }
+}
+
+

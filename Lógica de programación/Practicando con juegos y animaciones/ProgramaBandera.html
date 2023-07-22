@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de Bandera</title>
+</head>
+<body>
+    <!--Área donde se pueda gráficar -->
+    <canvas width="600" height="400"></canvas>
+    <script>
+        var pantalla = document.querySelector("canvas");
+        //.getContext= traer todo el contenido
+        //2d = dos dimensiones
+        var pincel = pantalla.getContext("2d"); 
+
+        pincel.fillStyle = "darkblue";//Propiedad o caracteristica.
+        //fillRect = llenar rectángulo, ayuda a posicionarnos.
+        pincel.fillRect(0,0,600,400); //Función
+
+        pincel.fillStyle = "blue";
+        pincel.fillRect(200,0,200,400);
+
+        pincel.fillStyle = "darkblue";
+        pincel.fillRect(400,0,200,400);
+
+        pincel.fillStyle = "lightblue";
+        //Inicia un camino con instrucciones.
+        pincel.beginPath();
+        //Mover el pincel
+        pincel.moveTo(300,200);
+        pincel.lineTo(200,400);
+        pincel.lineTo(400,400);
+        pincel.fill();
+
+        pincel.fillStyle = "lightblue";
+        pincel.beginPath();
+        pincel.moveTo(300,200);
+        pincel.lineTo(200,0);
+        pincel.lineTo(400,0);
+        pincel.fill();
+
+        pincel.fillStyle = "black";
+        pincel.beginPath();
+        pincel.arc(300,200,20,0,2*3.14);//circunferencias
+        pincel.fill();
+
+    </script>
+    
+</body>
+</html>
