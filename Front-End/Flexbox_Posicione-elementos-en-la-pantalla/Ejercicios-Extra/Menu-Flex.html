@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú flex</title>
+</head>
+<body>
+    <style>
+        .encabezado{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: auto;
+            margin: 30px;
+        }
+        .menu{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 55%;
+        }
+        .grid{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 31.3%;
+            margin: 1%;
+            background-color: #cccccc;
+        }
+        .grid-2{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .course {
+            width: 31.3%;
+            height: 50px;
+            margin: 1%;
+            background-color: lightskyblue;
+            text-align: center;
+        }
+    </style>
+
+    <header class="encabezado">
+        <a class="logo" href="#">
+          <img src="alura.svg">
+        </a>
+      
+        <ul class="menu">
+          <li class="menu-item">Item 1 del menu</li>
+          <li class="menu-item">Item 2 del menu</li>
+          <li class="menu-item">Item 3 del menu</li>
+          <li class="menu-item">Item 4 del menu</li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="grid">
+            <div class="box">Ruby on Rails</div>
+            <div class="box">Java</div>
+            <div class="box">HTML</div>
+            <div class="box">Python</div>
+            <div class="box">Wordpress</div>
+            <div class="box">Bootstrap</div>
+            <div class="box">Java Web</div>
+            <div class="box">MySQL</div>
+          </div>  
+
+          <div class="grid-2">
+            <!-- primera línea -->
+            <div class="course">q</div>
+            <div class="course">q</div>
+            <div class="course">q</div>
+            <!-- segunda línea -->
+            <div class="course">q</div>
+            <div class="course">q</div>
+            <div class="course">q</div>
+            <!-- tercera línea -->
+            <div class="course">q</div>
+            <div class="course">q</div>
+            <div class="course">q</div>
+            <!-- cuarta línea -->
+            <div class="course">q</div>
+            <div class="course">q</div>
+          </div>    
+    </main>
+
+</body>
+</html>

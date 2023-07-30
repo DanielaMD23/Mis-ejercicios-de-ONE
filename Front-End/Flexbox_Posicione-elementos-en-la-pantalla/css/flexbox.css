@@ -1,0 +1,146 @@
+/*
+.headerPrincipal-titulo{
+    display: inline-block;     Uno al lado del otro, aplicando en los items necesarios
+    vertical-align: middle;    Se convina con display. Se alinea verticalmente
+}
+
+.headerPrincipal-nav{
+    display: inline-block;
+    vertical-align: middle;
+    
+    margin: Se tendria que adivinar el número, seria un número mágico y no es responsivo.
+    float: right; No tiene la capacidad de colocar una altura y largo del item, se tendir que agregar mas atributos.
+    
+}
+*/
+
+/*Cuando se trabaja con flexbox se quiere que los items de un div se comporten de un manera especifica.*/
+
+/*Header*/
+.headerPrincipal .container {
+    display: flex;
+    /*Uno al lado de otro*/
+    align-items: center;
+    /*Alineados verticalmanete*/
+    justify-content: space-between;
+    /*Atributo dentro de flex = "Espacio entre elementos"*/
+}
+
+.headerPrincipal-nav {
+    display: flex;
+}
+
+/*Sección de cursos*/
+.contenidoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.contenidoPrincipal-cursos-link {
+    display: flex;
+    width: 23%;
+}
+.videoSobre .container{
+    display: flex;
+}
+.videoSobre-video{
+    flex-grow: 2; /*Toma todo el espacio que sobra de lado a lado y lo dive en la sección que se indique */
+    flex-shrink: 2;
+}
+.videoSobre-sobre{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.videoSobre-sobre-list{
+    flex-grow: 2;
+}
+
+/*Footer*/
+
+/*Mapa del curso*/
+.rodapePrincipal-navMap-list {
+    display: flex;
+    /*Separarlo por columnas*/
+    flex-direction: column;
+    /*De un lado a otro, la padron es row y colum los pone uno debajo del otro*/
+    height: 260px;
+    /*Limitar las columnas ne un tamaño especifico */
+    flex-wrap: wrap;
+    /*Se quiebra para la siguiente columna segun parametro height*/
+}
+
+/*Patrocinadores*/
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*Agregar el % para indicar el espacio disponible y dsitribur*/
+    width: 70%;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
+
+
+/*Responsive*/
+@media (max-width:768px) {
+    .headerPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .headerPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos-link {
+        width: 100%;
+    }
+    .videoSobre .container{
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+        flex-wrap: nowrap;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        align-items: center;
+        width: 100%;
+        margin: 0%;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center;
+    }
+    .headerPrincipal-nav-link-app{
+        order: -1;
+    }
+}
